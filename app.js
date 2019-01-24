@@ -4,7 +4,7 @@ const webpackConfig = require('./webpack.config');
 const mongoose = require('mongoose');
 const path = require('path');
 const bootStrap = require('./server/modules/bootstrap')
-const port  = 8000;
+const port  = process.env.PORT || 8000;
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, './server/views'));
@@ -45,8 +45,8 @@ if (process.env.NODE_ENV === 'development') {
 
 app.use('/api', require('./server/routes/api'))
 
-
 app.use(require('./server/routes/index'))
+
 app.listen(port, () => {
     console.log(`app is running on localhost:${port}`)
 })
