@@ -1,6 +1,5 @@
 /* eslint-disable */
 var webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -62,7 +61,6 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "bundle.css",
-    }),
-    new HtmlWebpackPlugin()
+    })
   ]
 }
