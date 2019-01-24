@@ -18,7 +18,7 @@ class FundsCategory extends Component {
      else return (
             <div className="funds-category">
               <header className="header">
-                <img src={require('./../images/../images/cleartax.png')} className="logo-img" alt="logo" />
+                <img src="/images/logo.png" className="logo-img" alt="logo" />
                 <button className="invest-btn" onClick={this.handleInvestment}>Want To Invest?</button>
               </header>
               {

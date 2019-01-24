@@ -11,6 +11,7 @@ const port  = 8000;
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, './server/views'));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/dist', express.static(path.join(__dirname, 'dist')));
 
 // connect to mongoDB
 var dbPath = process.env.NODE_ENV === 'production' ? 
