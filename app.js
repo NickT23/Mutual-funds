@@ -29,7 +29,7 @@ mongoose.connect(dbPath, { useNewUrlParser: true }, (err) => {
 if (process.env.NODE_ENV === 'development') {
   const webpack = require('webpack');
   const webpackDevMiddleware = require('webpack-dev-middleware');
-  
+
     console.log('in webpack hot middleware');
     
     const compiler = webpack(webpackConfig);
