@@ -1,4 +1,4 @@
-const url = 'http://localhost:8000/api'
+const url = process.env.NODE_ENV == 'production' ?  'http://cleartax-mf-recommendation.herokuapp.com/api' : 'http://localhost:8000/api'
 
 export function getAllBalancedFunds() {
     return dispatch => {
