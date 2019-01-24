@@ -6,6 +6,8 @@ import FundsCategory from './components/FundsCategory';
 import { getAllBalancedFunds, getAllElssFunds, getAllEquityFunds, getAllDebtFunds, getAllSmallMidcapFunds } from './actions/actionCreator';
 import Suggestion from './components/Suggestion';
 
+const url = process.env.NODE_ENV == 'production' ?  'http://cleartax-mf-recommendation.herokuapp.com/api' : 'http://localhost:8000/api'
+
 class App extends Component {
   state = {
     targetFund: []
@@ -19,7 +21,7 @@ class App extends Component {
   }
 
   handleTargetFund = (fund) => {
-    fetch(`http://localhost:8000/api/${fund}`)
+    fetch(`${url}/${fund}`)
     .then(res => res.json())
     .then(data => {
       this.setState({
