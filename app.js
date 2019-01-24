@@ -1,7 +1,5 @@
 const express = require('express');
 const app = express();
-const webpack = require('webpack');
-const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackConfig = require('./webpack.config');
 const mongoose = require('mongoose');
 const path = require('path');
@@ -29,6 +27,9 @@ mongoose.connect(dbPath, { useNewUrlParser: true }, (err) => {
 
 // Webpack config
 if (process.env.NODE_ENV === 'development') {
+  const webpack = require('webpack');
+  const webpackDevMiddleware = require('webpack-dev-middleware');
+  
     console.log('in webpack hot middleware');
     
     const compiler = webpack(webpackConfig);
