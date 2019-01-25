@@ -13,7 +13,7 @@ class FundsCategory extends Component {
         })
     }
   render() {
-      const { funds, splittedAmount }= this.props;
+      const { funds }= this.props;
       if(this.state.wantToInvest) return <Invest handleRemove={this.handleInvestment} />
      else return (
             <div className="funds-category">

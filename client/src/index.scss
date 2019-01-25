@@ -40,12 +40,25 @@ code {
   display: grid;
   grid-template-columns: 25% 75%;
 }
+.hero-note {
+  position: absolute;
+  bottom: 0;
+  padding: 5px;
+  a {
+    text-decoration: underline;
+    color: darkblue;
+  }
+  p{
+    font-size: 10px;
+    color: white;
+    text-align: left;
+  }
+}
 .m-funds {
-  // background-color: blue;
-  // color: white;
   height: 100vh;
   text-align: center;
   background-color: #47a0fb;
+  position: relative;
   .m-funds_list {
     display: grid;
     grid-template-rows: 10% 90%;
@@ -116,6 +129,7 @@ code {
   position: absolute;
   right: 30px;
   top: 30px;
+  cursor: pointer;
 }
 .invest-btn:hover {
   background-color: white;
@@ -186,9 +200,10 @@ code {
     border: .5px solid #fadd33;
     background-color: #FADD32;
     padding: 5px 15px;
-    color: white;
+    color: #343434;
     border-radius: 4px;
     margin-top: 10px;
+    cursor: pointer;
   }
   
 }
