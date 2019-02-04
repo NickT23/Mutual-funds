@@ -35,8 +35,8 @@ class FundsCategory extends Component {
                   <span>5yr returns</span>
                 </div>
                 {funds &&
-                  funds.map(fund => (
-                    <li className="fund-item">
+                  funds.map((fund, i) => (
+                    <li className="fund-item" key={i}>
                       <span>{fund.name}</span>
                       <span>{fund.fiveYrReturns}%</span>
                     </li>
